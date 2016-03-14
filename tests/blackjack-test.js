@@ -7,7 +7,7 @@ test('A bot knows a card value', function(assert) {
   const ten = cardValue('10');
   const jack = cardValue('jack');
   const queen = cardValue('queen');
-  const king = cardValue('queen');
+  const king = cardValue('king');
 
   assert.equal(ace, 11, 'A bot should know "ace" is equal to 11');
   assert.equal(five, 5, 'A bot should know "fiv" is equal to 5');
