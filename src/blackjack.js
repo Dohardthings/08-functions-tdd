@@ -5,23 +5,23 @@
  */
 function cardValue(cardName) {
 
-if (cardName === 'ace') {
-  return 11;
-}
+  if (cardName === 'ace') {
+    return 11;
+  }
 
-if (cardName === 'jack') {
-  return 10;
-}
-
-if (cardName === 'queen') {
-  return 10;
-}
-
-  if (cardName === 'king') {
+  if (cardName === 'jack') {
     return 10;
   }
 
-    else {return parseInt(cardName, 10)};
+  if (cardName === 'queen') {
+    return 10;
+  }
+
+  if (cardName === 'king') {
+    return 10;
+  } else {
+    return parseInt(cardName, 10)
+  };
 }
 
 /**
@@ -32,7 +32,7 @@ if (cardName === 'queen') {
  */
 
 function sum(a, b) {
-return a + b
+  return a + b
 };
 
 /**
@@ -42,10 +42,11 @@ return a + b
  * @return {Boolean}
  */
 function shouldSplit(cardOne, cardTwo) {
-if (cardValue(cardOne) === cardValue(cardTwo)) {
-  return true
-}
-else {return false}
+  if (cardValue(cardOne) === cardValue(cardTwo)) {
+    return true
+  } else {
+    return false
+  }
 };
 
 /**
@@ -56,14 +57,15 @@ else {return false}
  */
 function shouldHit(cardOne, cardTwo) {
 
-  if (shouldSplit(cardOne,cardTwo)) {
+  if (shouldSplit(cardOne, cardTwo)) {
     return false
   }
 
   if (cardValue(cardOne) + cardValue(cardTwo) < 17) {
     return true
+  } else {
+    return false
   }
-  else { return false }
 };
 
 /**
@@ -73,7 +75,11 @@ function shouldHit(cardOne, cardTwo) {
  * @return {String}
  */
 function selectAction(cardOne, cardTwo) {
-if (shouldSplit(cardOne,cardTwo)) {return 'split'}
-else if (shouldHit(cardOne, cardTwo)) {return 'hit'}
-else {return 'stay'}
+  if (shouldSplit(cardOne, cardTwo)) {
+    return 'split'
+  } else if (shouldHit(cardOne, cardTwo)) {
+    return 'hit'
+  } else {
+    return 'stay'
+  }
 };

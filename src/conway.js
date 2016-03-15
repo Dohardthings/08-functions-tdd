@@ -15,13 +15,14 @@ function aliveNeighbors(neighbors) {
  * @return {Boolean}
  */
 function aliveEh(neighbors) {
-if (aliveNeighbors(neighbors) > 3) {
-  return false;
-}
-if (aliveNeighbors(neighbors) <2) {
-  return false;
-}
-else { return true }
+  if (aliveNeighbors(neighbors) > 3) {
+    return false;
+  }
+  if (aliveNeighbors(neighbors) < 2) {
+    return false;
+  } else {
+    return true
+  }
 };
 
 /**
@@ -30,9 +31,9 @@ else { return true }
  * @return {Boolean}
  */
 function reviveEh(neighbors) {
-if (aliveNeighbors(neighbors) === 3) {
-  return true
-}
-
-else {return false}
+  if (aliveNeighbors(neighbors) === 3) {
+    return true
+  } else {
+    return false
+  }
 }
